@@ -1,0 +1,56 @@
+{
+  "name": "yaml-iframe-preview",
+  "displayName": "YAML Iframe Preview",
+  "description": "Split-view YAML preview that streams YAML to a remote iframe, with a local demo.html fallback.",
+  "version": "0.0.2",
+  "publisher": "your-publisher",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:yamlIframePreview.open"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "yamlIframePreview.open",
+        "title": "Open YAML Iframe Preview"
+      }
+    ],
+    "configuration": {
+      "title": "YAML Iframe Preview",
+      "properties": {
+        "yamlIframePreview.remoteUrl": {
+          "type": "string",
+          "default": "",
+          "description": "Remote HTTPS URL to embed in the webview iframe. Leave empty to use the bundled src/demo.html."
+        },
+        "yamlIframePreview.debounceMs": {
+          "type": "number",
+          "default": 300,
+          "minimum": 0,
+          "description": "Debounce delay (ms) for sending YAML changes to the iframe."
+        },
+        "yamlIframePreview.allowHttp": {
+          "type": "boolean",
+          "default": true,
+          "description": "Allow loading the bundled demo over http://localhost when no remote HTTPS URL is set."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

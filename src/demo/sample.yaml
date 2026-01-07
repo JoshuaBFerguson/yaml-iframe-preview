@@ -1,0 +1,30 @@
+# sample.yaml
+app:
+  name: "YAML Iframe Preview Demo"
+  version: "1.0.0"
+  environment: development
+
+server:
+  host: "localhost"
+  port: 8080
+  enableHttps: false
+
+features:
+  - name: preview
+    enabled: true
+  - name: liveUpdate
+    enabled: true
+  - name: debounce
+    enabled: true
+    delayMs: 300
+
+user:
+  id: 12345
+  name: "Jane Doe"
+  roles:
+    - admin
+    - editor
+
+limits:
+  maxItems: 50
+  timeoutSeconds: 30
