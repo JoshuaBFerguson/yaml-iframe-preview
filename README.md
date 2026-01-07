@@ -2,6 +2,8 @@
 
 Split-view YAML preview that streams YAML to a remote iframe, with a local demo.html fallback.
 
+<img width="1379" height="487" alt="ss" src="https://github.com/user-attachments/assets/d80de1d6-d446-4bbc-a392-71e6a5e8e7b9" />
+
 ## Features
 
 - Opens a side-by-side webview that embeds your app in an iframe.
