@@ -90,4 +90,4 @@ To run the extension locally:
 
 ## License
 
-TBD
+MIT
